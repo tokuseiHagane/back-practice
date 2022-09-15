@@ -19,6 +19,8 @@ services:
     volumes:
       - ./server:/docker-entrypoint-initdb.d
       - db_volume:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=MYSQL_ROOT_PASSWORD
     ports:
       - 8081:3306
 
