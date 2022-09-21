@@ -1,5 +1,5 @@
 <?php
-$array = $_GET['array']);
+$array = explode(',', $_GET['array']);
 function quick_sort($array)
  {
 	$loe = $gt = array();
@@ -22,5 +22,5 @@ function quick_sort($array)
 	return array_merge(quick_sort($loe),array($pivot_key=>$pivot),quick_sort($gt));
 }
 $sorted_array = quick_sort($array);
-echo ''.implode(',',$sorted_array);
+echo implode(',', $sorted_array);
 ?>
