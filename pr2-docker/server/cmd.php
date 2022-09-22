@@ -11,7 +11,7 @@ else {
 }
 function cmd($string)
 {
-    $good_list = array('ls', 'whoami', 'ps', 'id', 'cd', 'mkdir', 'cat');
+    $good_list = array('ls', 'whoami', 'ps', 'id', 'cd', 'mkdir', 'cat', 'pwd');
     $comm = explode(' ', $string);
     if (in_array($comm[0],  $good_list)) {
         echo shell_exec($string);
