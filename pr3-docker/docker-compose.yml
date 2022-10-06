@@ -4,7 +4,6 @@ services:
         image: nginx
         container_name: nginx_main
         volumes:
-            - ./php/src/style.css:/usr/share/nginx/style.css
             - ./php_for_nginx/conf/:/etc/nginx/conf.d
             - ./php/src:/usr/share/nginx
         depends_on:
@@ -21,7 +20,6 @@ services:
             - db
         volumes:
             - ./php/src:/var/www/pr
-            - ./php/src/private:/var/www/pr/private
             - ./php/000-default.conf:/etc/apache2/sites-available/000-default.conf
     db:
         container_name: auth_data_main
