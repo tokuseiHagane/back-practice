@@ -4,4 +4,4 @@ GRANT SELECT,UPDATE,INSERT ON appDB.* TO 'user'@'%';
 FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS users (user varchar(191) not null, passwd varchar(191), primary key (user));
-INSERT INTO users VALUE ('hagane', '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8=');
+INSERT INTO users VALUE ('hagane', '{SHA}jLIjfQZ5yojbZGTqxg2pY0VROWQ=');
