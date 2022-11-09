@@ -15,9 +15,7 @@ $author = new Authors($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-$request = $_GET["request"];
-
-if ($request == "create") {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (
         !empty($data->name) &&
         !empty($data->surName) &&
@@ -30,16 +28,16 @@ if ($request == "create") {
     
         if ($author->create()) {
             http_response_code(201);
-            echo json_encode(array("message" => "Статья была записана"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Добавлен автор"), JSON_UNESCAPED_UNICODE);
         } else {
             http_response_code(503);
-            echo json_encode(array("message" => "Невозможно записать статью"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Невозможно записать автора"), JSON_UNESCAPED_UNICODE);
         }
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Невозможно записать статью. Данные неполные."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно записать автора. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($request == "read") {
+} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $stmt = $author->read();
     $num = $stmt->rowCount();
 
@@ -49,9 +47,9 @@ if ($request == "create") {
         echo json_encode($result);
     } else {
         http_response_code(404);
-        echo json_encode(array("message" => "Статьи не найдены."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Авторы не найдены."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($request == "update") {
+} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
     $author->id = $_GET["id"];
     if (!empty($data->name)) {
         $author->name = $data->name;
@@ -65,22 +63,22 @@ if ($request == "create") {
     if ($author->update()) {
         http_response_code(200);
     
-        echo json_encode(array("message" => "Статья была обновлена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Автор была обновлена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
     
-        echo json_encode(array("message" => "Невозможно обновить статью"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно обновить автора"), JSON_UNESCAPED_UNICODE);
     }
 
-} elseif ($request == "delete") {
+} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $author->id = $_GET["id"];
 
     if ($author->delete()) {
         http_response_code(200);
-        echo json_encode(array("message" => "Статья удалена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Автор удалена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
-        echo json_encode(array("message" => "Не удалось удалить статью"));
+        echo json_encode(array("message" => "Не удалось удалить автора"));
     }
 } else {
     http_response_code(500);
