@@ -15,7 +15,7 @@ $article = new Articles($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (
         !empty($data->title) &&
         !empty($data->content) &&
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(400);
         echo json_encode(array("message" => "Невозможно записать статью. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $stmt = $article->read();
     $num = $stmt->rowCount();
 
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(404);
         echo json_encode(array("message" => "Статьи не найдены."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
     $article->id = $_GET["id"];
     if (!empty($data->title)) {
         $article->title = $data->title;
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(array("message" => "Невозможно обновить статью"), JSON_UNESCAPED_UNICODE);
     }
 
-} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     $article->id = $_GET["id"];
 
     if ($article->delete()) {

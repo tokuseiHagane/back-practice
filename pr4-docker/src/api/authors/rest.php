@@ -15,7 +15,7 @@ $author = new Authors($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (
         !empty($data->name) &&
         !empty($data->surName) &&
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(400);
         echo json_encode(array("message" => "Невозможно записать автора. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $stmt = $author->read();
     $num = $stmt->rowCount();
 
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(404);
         echo json_encode(array("message" => "Авторы не найдены."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
     $author->id = $_GET["id"];
     if (!empty($data->name)) {
         $author->name = $data->name;
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(array("message" => "Невозможно обновить автора"), JSON_UNESCAPED_UNICODE);
     }
 
-} elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
     $author->id = $_GET["id"];
 
     if ($author->delete()) {
