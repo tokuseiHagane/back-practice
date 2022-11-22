@@ -12,13 +12,13 @@ require "session.php";
           crossorigin="anonymous">
 </head>
 <body>
-<h1>Список должников</h1>
+<h1>Список статей</h1>
 <ol>
     <?php
     $mysqli = new mysqli("db", "root", "example", "appDB");
     $result = $mysqli->query("SELECT * FROM student");
-    foreach ($result as $row){
-        echo "<li>{$row['surname']} {$row['name']}</li>";
+    foreach ($result as $row) {
+        echo "<li>{$row['author']} '{$row['title']}' </li>";
     }
     ?>
 </ol>
