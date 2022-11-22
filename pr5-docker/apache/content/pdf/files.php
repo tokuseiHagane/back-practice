@@ -7,7 +7,7 @@
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="../../apache/content/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body style="margin-left: 2%;">
     <form enctype="multipart/form-data" action="loader.php" method="POST">
