@@ -18,10 +18,3 @@ COPY ./content/composer.json ./
 RUN composer update && \
     composer install && \
     service apache2 restart
-#RUN apt-get install -y libmcrypt-dev && \
-#    pecl install -o -f mcrypt && \
-#    composer require --prefer-dist yiisoft/yii2-faker && \
-#    docker-php-ext-install zlib && \
-#    docker-php-ext-install gd && \
-#    composer require amenadiel/jpgraph && \
-#    service apache2 restart
