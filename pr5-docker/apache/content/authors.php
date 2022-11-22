@@ -11,21 +11,25 @@ require "session.php";
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-
 </head>
 <body>
-<h1>Список авторов</h1>
-<ol>
-    <?php
-    $mysqli = new mysqli("db", "root", "example", "appDB");
-    $result = $mysqli->query("SELECT * FROM authors");
-    foreach ($result as $row) {
-        echo "<li>{$row['surname']} {$row['name']}</li>";
-    }
-    ?>
-</ol>
-<a href="index.html">На главную</a>
-<br>
-<a href="admin/admin.php">Админам сюда</a>
+    <div class="main_content">
+        <div>
+            <h1>Список авторов</h1>
+            <ol>
+                <?php
+                $mysqli = new mysqli("db", "root", "example", "appDB");
+                $result = $mysqli->query("SELECT * FROM authors");
+                foreach ($result as $row) {
+                    echo "<li>{$row['surname']} {$row['name']}</li>";
+                }
+                ?>
+            </ol>
+        </div>
+        <div class="exile">
+            <a href="index.html">На главную</a>
+            <a href="admin/admin.php">Админам сюда</a>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 $uploaddir = '/var/www/html/pdf/files/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 echo '<link rel="stylesheet" href="../style.css">';
-echo '<div>';
+echo '<div style="display: flex; align-items: center; gap: 10px; padding: 10px; background: rgba(73, 72, 72, 0.651); border-radius: 25px;">';
 setlocale(LC_ALL, 'en_US.UTF-8');
 $ext = pathinfo($_FILES['userfile']['name'], PATHINFO_EXTENSION);
 if ($ext != "pdf") {
