@@ -1,21 +1,21 @@
 <?php
 $uploaddir = '/var/www/html/pdf/files/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
-
-echo '<pre>';
+echo '<link rel="stylesheet" href="../style.css">';
+echo '<div>';
 setlocale(LC_ALL, 'en_US.UTF-8');
 $ext = pathinfo($_FILES['userfile']['name'], PATHINFO_EXTENSION);
 if ($ext != "pdf") {
-    echo "Вы попытались загрузить не pdf файл";
+    echo "<p>Вы попытались загрузить не pdf файл</p>";
 } else {
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-        echo "Файл корректен и был успешно загружен.\n";
+        echo "<p>Файл корректен и был успешно загружен.</p>";
     } else {
-        echo "Возможная атака с помощью файловой загрузки!\n";
+        echo "<p>Возможная атака с помощью файловой загрузки!</p>";
     }
 //echo 'Некоторая отладочная информация:';
 //print_r($_FILES);
 }
-echo "</pre>";
+echo "</div>";
 ?>
 <a href="files.php">К списку</a>
