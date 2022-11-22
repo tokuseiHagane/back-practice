@@ -1,19 +1,24 @@
 <?php
 
-class Database {
-    private string $host = "db";
-    private string $db_name = "appDB";
-    private string $username = "root";
-    private string $password = "example";
-    public ?mysqli $conn;
+class Database
+{
+    private $host = "database";
+    private $db_name = "appDB";
+    private $username = "user";
+    private $password = "password";
+    public $connect;
 
-    public function getConnection(): ?mysqli
+    public function getConnection(): ?PDO
     {
-        $this->conn = null;
+        $this->connect = null;
 
-        $this->conn = new mysqli("db", "root", "example", "appDB");
-        $this->conn->query("set names utf8");
+        try {
+            $this->connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password, );
+            $this->connect->exec("set names utf8");
+        } catch (PDOException $exception) {
+            echo "Ошибка подключения: " . $exception->getMessage();
+        }
 
-        return $this->conn;
+        return $this->connect;
     }
 }
