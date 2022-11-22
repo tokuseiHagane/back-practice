@@ -10,6 +10,8 @@ require "session.php";
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 <h1>Список авторов</h1>
@@ -17,7 +19,7 @@ require "session.php";
     <?php
     $mysqli = new mysqli("db", "root", "example", "appDB");
     $result = $mysqli->query("SELECT * FROM authors");
-    foreach ($result as $row){
+    foreach ($result as $row) {
         echo "<li>{$row['surname']} {$row['name']}</li>";
     }
     ?>

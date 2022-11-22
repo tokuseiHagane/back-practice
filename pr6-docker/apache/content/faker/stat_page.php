@@ -19,21 +19,21 @@ require_once "plot_bar.php";
 require_once "plot_pie.php";
 require_once "plot_scatter.php";
 
-// draw_plot_pie();
+draw_plot_pie();
 // draw_plot_bar();
 // draw_plot_scatter();
 ?>
 <?php
 require_once "watermark.php";
 
-// $images = array("images/plot_pie.png", "images/plot_bar.png", "images/plot_scatter.png");
+$images = array("images/plot_pie.png");//, "images/plot_bar.png", "images/plot_scatter.png");
 
-// foreach ($images as $image) {
-//     add_watermark($image);
-// }
+foreach ($images as $image) {
+    add_watermark($image);
+}
 ?>
-<!-- <img src="images/plot_pie.png" alt="plot_1.png">
-<img src="images/plot_bar.png" alt="plot_2.png">
+<img src="images/plot_pie.png" alt="plot_1.png">
+<!-- <img src="images/plot_bar.png" alt="plot_2.png">
 <img src="images/plot_scatter.png" alt="plot_3.png"> -->
 
 <table class="table">

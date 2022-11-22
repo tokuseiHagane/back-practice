@@ -6,17 +6,17 @@ function get_raw_data(): array {
     return json_decode($input);
 }
 
-function get_day_count($data): array
+function get_temp_count($data): array
 {
-    $day_count = array();
+    $temp_count = array();
     foreach ($data as $row) {
-        $weekday = $row->weekday;
-        if(!isset($day_count[$weekday])) {
-            $day_count[$weekday] = 0;
+        $temperature = number_format($row->temperature, 1, '.', '');
+        if (!isset($temp_count[$temperature])) {
+            $temp_count[$temperature] = 0;
         }
-        $day_count[$weekday] += 1;
+        $temp_count[$temperature] += 1;
     }
-    return $day_count;
+    return $temp_count;
 }
 
 function get_blood_type_count($data): array
@@ -47,23 +47,23 @@ function get_month_count($data): array
 
 function get_day_blood_tuple(): array {
     $data = get_raw_data();
-    $blood_array = array();
-    $day_array = array();
-    $blood_keys = array();
-    $day_keys = array();
+    $humidity_array = array();
+    $time_array = array();
+    $humidity_keys = array();
+    $time_keys = array();
     foreach ($data as $row) {
-        if (!in_array($row->weekday, $day_keys)) {
-            $day_keys[] = $row->weekday;
+        if (!in_array($row->humidity, $humidity_keys)) {
+            $humidity_keys[] = $row->humidity;
         }
-        if (!in_array($row->bloodType, $blood_keys)) {
-            $blood_keys[] =$row->bloodType;
+        if (!in_array($row->time, $time_keys)) {
+            $time_keys[] =$row->time;
         }
     }
     $day_keys = array_flip($day_keys);
-    $blood_keys = array_flip($blood_keys);
+    $time_keys = array_flip($time_keys);
     foreach ($data as $row) {
         $day_array[] = $day_keys[$row->weekday];
-        $blood_array[] = $blood_keys[$row->bloodType];
+        $blood_array[] = $time_keys[$row->bloodType];
     }
     return array(
         "day" => $day_array,

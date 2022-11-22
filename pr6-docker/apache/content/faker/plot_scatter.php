@@ -14,10 +14,10 @@ require_once 'data_load.php';
 function draw_plot_scatter()
 {
     $data = get_day_blood_tuple();
-    $datax = $data["day"];
-    $datay = $data["blood"];
-    $labels_x = $data["day_keys"];
-    $labels_y = $data["blood_keys"];
+    $datax = $data["time"];
+    $datay = $data["humidity"];
+    $labels_x = $data["time_keys"];
+    $labels_y = $data["humidity_keys"];
 
     $__width = 400;
     $__height = 300;
@@ -27,7 +27,7 @@ function draw_plot_scatter()
     $graph->img->SetMargin(40, 40, 40, 40);
     $graph->SetShadow();
 
-    $graph->title->Set('Blood and Day');
+    $graph->title->Set('Humidity line plot');
     $graph->title->SetFont(FF_FONT1, FS_BOLD);
 
 
