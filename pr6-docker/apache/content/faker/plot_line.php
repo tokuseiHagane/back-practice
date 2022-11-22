@@ -16,9 +16,6 @@ function draw_plot_scatter()
     $data = get_day_blood_tuple();
     $datax = $data["time"];
     $datay = $data["humidity"];
-    $labels_x = $data["time_keys"];
-    $labels_y = $data["humidity_keys"];
-
     $__width = 400;
     $__height = 300;
     $graph = new Graph\Graph($__width, $__height);
@@ -26,16 +23,16 @@ function draw_plot_scatter()
 
     $graph->img->SetMargin(40, 40, 40, 40);
     $graph->SetShadow();
-
+    $graph->SetScale('intint');
     $graph->title->Set('Humidity line plot');
     $graph->title->SetFont(FF_FONT1, FS_BOLD);
 
 
-    $sp1 = new Plot\ScatterPlot($datay, $datax);
-    $sp1->mark->SetType(MARK_FILLEDCIRCLE);
-    $sp1->mark->SetFillColor("#ff8800");
-    $sp1->mark->SetWidth(8);
+    $sp1 = new Plot\LInePlot($datay);
+    // $sp1->mark->SetType(MARK_FILLEDCIRCLE);
+    // $sp1->mark->SetFillColor("#ff8800");
+    // $sp1->mark->SetWidth(8);
 
     $graph->Add($sp1);
-    $graph->Stroke("images/plot_scatter.png");
+    $graph->Stroke("images/plot_line.png");
 }

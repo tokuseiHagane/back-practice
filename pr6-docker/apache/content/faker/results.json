@@ -1,452 +1,452 @@
 [
     {
-        "vin": "23.1",
+        "vin": "23.2",
         "vout": "4.8",
-        "temperature": "20.1",
-        "pressure": "766",
-        "humidity": "713",
-        "soundLevel": "288",
-        "time": "1669116015"
+        "temperature": "20.4",
+        "pressure": "760",
+        "humidity": "756",
+        "soundLevel": "227",
+        "time": "1669097700"
+    },
+    {
+        "vin": "23.9",
+        "vout": "5",
+        "temperature": "20.5",
+        "pressure": "756",
+        "humidity": "418",
+        "soundLevel": "466",
+        "time": "1669124026"
     },
     {
         "vin": "23.7",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "746",
-        "humidity": "572",
-        "soundLevel": "149",
-        "time": "1669098192"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "756",
-        "humidity": "206",
-        "soundLevel": "785",
-        "time": "1669114297"
-    },
-    {
-        "vin": "23.3",
-        "vout": "4.9",
+        "vout": "5",
         "temperature": "20.3",
         "pressure": "750",
-        "humidity": "780",
-        "soundLevel": "476",
-        "time": "1669063608"
+        "humidity": "545",
+        "soundLevel": "765",
+        "time": "1669124686"
     },
     {
         "vin": "23.8",
-        "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "764",
-        "humidity": "362",
-        "soundLevel": "438",
-        "time": "1669066515"
-    },
-    {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "754",
-        "humidity": "349",
-        "soundLevel": "818",
-        "time": "1669067403"
-    },
-    {
-        "vin": "23.3",
-        "vout": "4.9",
-        "temperature": "20.3",
-        "pressure": "754",
-        "humidity": "566",
-        "soundLevel": "210",
-        "time": "1669097506"
-    },
-    {
-        "vin": "23.8",
-        "vout": "5",
-        "temperature": "20",
-        "pressure": "746",
-        "humidity": "773",
-        "soundLevel": "852",
-        "time": "1669065583"
-    },
-    {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.3",
-        "pressure": "753",
-        "humidity": "587",
-        "soundLevel": "291",
-        "time": "1669123658"
-    },
-    {
-        "vin": "23.8",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "748",
-        "humidity": "718",
-        "soundLevel": "634",
-        "time": "1669113599"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.3",
-        "pressure": "762",
-        "humidity": "564",
-        "soundLevel": "940",
-        "time": "1669079592"
-    },
-    {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "748",
-        "humidity": "343",
-        "soundLevel": "688",
-        "time": "1669074707"
-    },
-    {
-        "vin": "23.4",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "754",
-        "humidity": "391",
-        "soundLevel": "887",
-        "time": "1669107422"
-    },
-    {
-        "vin": "23.4",
-        "vout": "5",
-        "temperature": "20.6",
-        "pressure": "745",
-        "humidity": "671",
-        "soundLevel": "279",
-        "time": "1669084331"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.8",
-        "temperature": "20.5",
-        "pressure": "762",
-        "humidity": "230",
-        "soundLevel": "660",
-        "time": "1669065449"
-    },
-    {
-        "vin": "23.5",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "745",
-        "humidity": "306",
-        "soundLevel": "323",
-        "time": "1669084399"
-    },
-    {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "745",
-        "humidity": "295",
-        "soundLevel": "465",
-        "time": "1669092699"
-    },
-    {
-        "vin": "23.3",
         "vout": "5",
         "temperature": "20.2",
-        "pressure": "756",
-        "humidity": "524",
-        "soundLevel": "634",
-        "time": "1669135556"
+        "pressure": "757",
+        "humidity": "564",
+        "soundLevel": "335",
+        "time": "1669120670"
     },
     {
         "vin": "23.4",
         "vout": "4.9",
         "temperature": "20.1",
-        "pressure": "747",
-        "humidity": "754",
-        "soundLevel": "415",
-        "time": "1669129121"
+        "pressure": "750",
+        "humidity": "573",
+        "soundLevel": "804",
+        "time": "1669094150"
     },
     {
-        "vin": "24",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "756",
-        "humidity": "519",
-        "soundLevel": "318",
-        "time": "1669110812"
+        "vin": "23.9",
+        "vout": "4.8",
+        "temperature": "20.3",
+        "pressure": "765",
+        "humidity": "283",
+        "soundLevel": "625",
+        "time": "1669068671"
     },
     {
         "vin": "23.6",
         "vout": "5",
         "temperature": "20.1",
-        "pressure": "748",
-        "humidity": "532",
-        "soundLevel": "851",
-        "time": "1669121887"
+        "pressure": "747",
+        "humidity": "657",
+        "soundLevel": "908",
+        "time": "1669084477"
     },
     {
-        "vin": "23.2",
+        "vin": "23.8",
         "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "745",
-        "humidity": "481",
-        "soundLevel": "480",
-        "time": "1669148508"
-    },
-    {
-        "vin": "23.2",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "745",
-        "humidity": "651",
-        "soundLevel": "180",
-        "time": "1669141962"
+        "temperature": "20.2",
+        "pressure": "761",
+        "humidity": "493",
+        "soundLevel": "207",
+        "time": "1669119203"
     },
     {
         "vin": "23",
         "vout": "4.8",
-        "temperature": "20.1",
-        "pressure": "758",
-        "humidity": "496",
-        "soundLevel": "761",
-        "time": "1669089359"
+        "temperature": "20.3",
+        "pressure": "761",
+        "humidity": "562",
+        "soundLevel": "588",
+        "time": "1669074301"
     },
     {
-        "vin": "23.3",
+        "vin": "23.2",
+        "vout": "4.8",
+        "temperature": "20.3",
+        "pressure": "753",
+        "humidity": "509",
+        "soundLevel": "109",
+        "time": "1669089539"
+    },
+    {
+        "vin": "23.2",
+        "vout": "4.8",
+        "temperature": "20.1",
+        "pressure": "745",
+        "humidity": "282",
+        "soundLevel": "925",
+        "time": "1669092746"
+    },
+    {
+        "vin": "23.2",
         "vout": "4.8",
         "temperature": "20.5",
-        "pressure": "750",
-        "humidity": "509",
-        "soundLevel": "961",
-        "time": "1669103491"
+        "pressure": "755",
+        "humidity": "430",
+        "soundLevel": "762",
+        "time": "1669149894"
+    },
+    {
+        "vin": "23.4",
+        "vout": "4.9",
+        "temperature": "20.2",
+        "pressure": "761",
+        "humidity": "626",
+        "soundLevel": "103",
+        "time": "1669137643"
+    },
+    {
+        "vin": "23",
+        "vout": "4.9",
+        "temperature": "20",
+        "pressure": "756",
+        "humidity": "542",
+        "soundLevel": "118",
+        "time": "1669078075"
     },
     {
         "vin": "23.7",
-        "vout": "5",
+        "vout": "4.9",
         "temperature": "20.5",
-        "pressure": "752",
-        "humidity": "280",
-        "soundLevel": "905",
-        "time": "1669121388"
+        "pressure": "763",
+        "humidity": "212",
+        "soundLevel": "169",
+        "time": "1669076527"
+    },
+    {
+        "vin": "23.6",
+        "vout": "4.9",
+        "temperature": "20.5",
+        "pressure": "759",
+        "humidity": "453",
+        "soundLevel": "592",
+        "time": "1669106876"
+    },
+    {
+        "vin": "23.6",
+        "vout": "4.8",
+        "temperature": "20",
+        "pressure": "746",
+        "humidity": "403",
+        "soundLevel": "920",
+        "time": "1669094596"
+    },
+    {
+        "vin": "23.9",
+        "vout": "4.9",
+        "temperature": "20.1",
+        "pressure": "759",
+        "humidity": "484",
+        "soundLevel": "254",
+        "time": "1669101947"
     },
     {
         "vin": "23.6",
         "vout": "4.9",
         "temperature": "20.1",
-        "pressure": "752",
-        "humidity": "687",
-        "soundLevel": "183",
-        "time": "1669095294"
+        "pressure": "765",
+        "humidity": "678",
+        "soundLevel": "170",
+        "time": "1669110997"
+    },
+    {
+        "vin": "23.6",
+        "vout": "4.9",
+        "temperature": "20.2",
+        "pressure": "760",
+        "humidity": "588",
+        "soundLevel": "894",
+        "time": "1669148560"
+    },
+    {
+        "vin": "23.7",
+        "vout": "5",
+        "temperature": "20.6",
+        "pressure": "757",
+        "humidity": "659",
+        "soundLevel": "170",
+        "time": "1669145206"
+    },
+    {
+        "vin": "23.5",
+        "vout": "4.8",
+        "temperature": "20.3",
+        "pressure": "762",
+        "humidity": "482",
+        "soundLevel": "656",
+        "time": "1669078193"
+    },
+    {
+        "vin": "23.8",
+        "vout": "4.9",
+        "temperature": "20.1",
+        "pressure": "758",
+        "humidity": "253",
+        "soundLevel": "796",
+        "time": "1669078510"
+    },
+    {
+        "vin": "23.3",
+        "vout": "4.8",
+        "temperature": "20.4",
+        "pressure": "762",
+        "humidity": "490",
+        "soundLevel": "222",
+        "time": "1669143178"
+    },
+    {
+        "vin": "23.3",
+        "vout": "5",
+        "temperature": "20.5",
+        "pressure": "745",
+        "humidity": "732",
+        "soundLevel": "221",
+        "time": "1669147662"
+    },
+    {
+        "vin": "23.8",
+        "vout": "5",
+        "temperature": "20.6",
+        "pressure": "749",
+        "humidity": "444",
+        "soundLevel": "755",
+        "time": "1669111089"
+    },
+    {
+        "vin": "23.3",
+        "vout": "4.8",
+        "temperature": "20.4",
+        "pressure": "747",
+        "humidity": "430",
+        "soundLevel": "837",
+        "time": "1669100178"
+    },
+    {
+        "vin": "23.9",
+        "vout": "4.9",
+        "temperature": "20.1",
+        "pressure": "753",
+        "humidity": "240",
+        "soundLevel": "759",
+        "time": "1669092626"
     },
     {
         "vin": "23.9",
         "vout": "4.9",
         "temperature": "20.5",
-        "pressure": "746",
-        "humidity": "618",
-        "soundLevel": "498",
-        "time": "1669148677"
+        "pressure": "747",
+        "humidity": "736",
+        "soundLevel": "110",
+        "time": "1669123571"
     },
     {
-        "vin": "23.4",
-        "vout": "5",
+        "vin": "23.5",
+        "vout": "4.9",
         "temperature": "20",
-        "pressure": "746",
-        "humidity": "332",
-        "soundLevel": "323",
-        "time": "1669078485"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "755",
-        "humidity": "575",
-        "soundLevel": "687",
-        "time": "1669132918"
-    },
-    {
-        "vin": "23.2",
-        "vout": "5",
-        "temperature": "20.1",
-        "pressure": "758",
-        "humidity": "333",
-        "soundLevel": "678",
-        "time": "1669115676"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.8",
-        "temperature": "20.1",
         "pressure": "756",
-        "humidity": "649",
-        "soundLevel": "525",
-        "time": "1669089297"
+        "humidity": "683",
+        "soundLevel": "147",
+        "time": "1669148655"
     },
     {
-        "vin": "23.2",
+        "vin": "23.7",
         "vout": "4.8",
-        "temperature": "20.6",
-        "pressure": "755",
-        "humidity": "411",
-        "soundLevel": "878",
-        "time": "1669149146"
-    },
-    {
-        "vin": "23.2",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "765",
-        "humidity": "664",
-        "soundLevel": "752",
-        "time": "1669148474"
+        "temperature": "20.4",
+        "pressure": "763",
+        "humidity": "245",
+        "soundLevel": "120",
+        "time": "1669074175"
     },
     {
         "vin": "23.8",
         "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "746",
-        "humidity": "760",
-        "soundLevel": "204",
-        "time": "1669147315"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "764",
-        "humidity": "770",
-        "soundLevel": "965",
-        "time": "1669139477"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "764",
-        "humidity": "453",
-        "soundLevel": "976",
-        "time": "1669127232"
-    },
-    {
-        "vin": "23.6",
-        "vout": "5",
-        "temperature": "20.4",
-        "pressure": "753",
-        "humidity": "254",
-        "soundLevel": "382",
-        "time": "1669094469"
+        "temperature": "20.1",
+        "pressure": "756",
+        "humidity": "471",
+        "soundLevel": "254",
+        "time": "1669137169"
     },
     {
         "vin": "23.3",
         "vout": "4.8",
         "temperature": "20.4",
-        "pressure": "764",
-        "humidity": "389",
-        "soundLevel": "660",
-        "time": "1669139768"
+        "pressure": "748",
+        "humidity": "425",
+        "soundLevel": "670",
+        "time": "1669073219"
     },
     {
         "vin": "23.7",
         "vout": "4.8",
-        "temperature": "20.1",
-        "pressure": "754",
-        "humidity": "613",
-        "soundLevel": "139",
-        "time": "1669121042"
+        "temperature": "20.2",
+        "pressure": "748",
+        "humidity": "702",
+        "soundLevel": "117",
+        "time": "1669073525"
     },
     {
         "vin": "23.5",
         "vout": "4.9",
         "temperature": "20",
         "pressure": "761",
-        "humidity": "280",
-        "soundLevel": "496",
-        "time": "1669077324"
+        "humidity": "425",
+        "soundLevel": "465",
+        "time": "1669149918"
+    },
+    {
+        "vin": "23.9",
+        "vout": "4.9",
+        "temperature": "20.2",
+        "pressure": "762",
+        "humidity": "290",
+        "soundLevel": "676",
+        "time": "1669105003"
+    },
+    {
+        "vin": "23.4",
+        "vout": "4.8",
+        "temperature": "20.4",
+        "pressure": "746",
+        "humidity": "252",
+        "soundLevel": "145",
+        "time": "1669104835"
+    },
+    {
+        "vin": "23.2",
+        "vout": "4.8",
+        "temperature": "20.6",
+        "pressure": "749",
+        "humidity": "403",
+        "soundLevel": "105",
+        "time": "1669120854"
+    },
+    {
+        "vin": "23.2",
+        "vout": "4.9",
+        "temperature": "20.5",
+        "pressure": "749",
+        "humidity": "683",
+        "soundLevel": "468",
+        "time": "1669150253"
+    },
+    {
+        "vin": "23.5",
+        "vout": "4.9",
+        "temperature": "20.2",
+        "pressure": "753",
+        "humidity": "313",
+        "soundLevel": "134",
+        "time": "1669151314"
+    },
+    {
+        "vin": "23.4",
+        "vout": "4.9",
+        "temperature": "20.2",
+        "pressure": "746",
+        "humidity": "226",
+        "soundLevel": "475",
+        "time": "1669096577"
     },
     {
         "vin": "23.6",
-        "vout": "5",
-        "temperature": "20.5",
-        "pressure": "746",
-        "humidity": "541",
-        "soundLevel": "977",
-        "time": "1669114055"
+        "vout": "4.9",
+        "temperature": "20.3",
+        "pressure": "761",
+        "humidity": "679",
+        "soundLevel": "258",
+        "time": "1669106486"
+    },
+    {
+        "vin": "23",
+        "vout": "4.9",
+        "temperature": "20",
+        "pressure": "766",
+        "humidity": "604",
+        "soundLevel": "489",
+        "time": "1669116116"
     },
     {
         "vin": "23.3",
         "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "757",
-        "humidity": "618",
-        "soundLevel": "690",
-        "time": "1669081199"
+        "temperature": "20.5",
+        "pressure": "748",
+        "humidity": "493",
+        "soundLevel": "549",
+        "time": "1669125366"
+    },
+    {
+        "vin": "23.2",
+        "vout": "4.9",
+        "temperature": "20.5",
+        "pressure": "760",
+        "humidity": "503",
+        "soundLevel": "525",
+        "time": "1669118644"
     },
     {
         "vin": "23.9",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "746",
-        "humidity": "706",
-        "soundLevel": "401",
-        "time": "1669115695"
-    },
-    {
-        "vin": "23.5",
-        "vout": "4.8",
-        "temperature": "20.6",
-        "pressure": "746",
-        "humidity": "771",
-        "soundLevel": "326",
-        "time": "1669089697"
-    },
-    {
-        "vin": "23.1",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "748",
-        "humidity": "489",
-        "soundLevel": "423",
-        "time": "1669126110"
+        "vout": "5",
+        "temperature": "20.3",
+        "pressure": "745",
+        "humidity": "487",
+        "soundLevel": "747",
+        "time": "1669111255"
     },
     {
         "vin": "23.7",
         "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "750",
-        "humidity": "455",
-        "soundLevel": "573",
-        "time": "1669120731"
+        "temperature": "20.5",
+        "pressure": "759",
+        "humidity": "429",
+        "soundLevel": "975",
+        "time": "1669103417"
     },
     {
-        "vin": "23.5",
+        "vin": "24",
         "vout": "5",
-        "temperature": "20.4",
+        "temperature": "20.1",
         "pressure": "750",
-        "humidity": "648",
-        "soundLevel": "178",
-        "time": "1669085287"
+        "humidity": "336",
+        "soundLevel": "669",
+        "time": "1669106872"
     },
     {
-        "vin": "23.3",
+        "vin": "23",
         "vout": "4.9",
-        "temperature": "20.6",
-        "pressure": "749",
-        "humidity": "669",
-        "soundLevel": "690",
-        "time": "1669102783"
+        "temperature": "20.4",
+        "pressure": "756",
+        "humidity": "286",
+        "soundLevel": "584",
+        "time": "1669104933"
     },
     {
-        "vin": "23.3",
-        "vout": "4.9",
+        "vin": "23.1",
+        "vout": "5",
         "temperature": "20.2",
-        "pressure": "766",
-        "humidity": "655",
-        "soundLevel": "433",
-        "time": "1669092444"
+        "pressure": "762",
+        "humidity": "766",
+        "soundLevel": "602",
+        "time": "1669073595"
     }
 ]

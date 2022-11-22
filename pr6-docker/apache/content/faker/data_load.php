@@ -19,17 +19,17 @@ function get_temp_count($data): array
     return $temp_count;
 }
 
-function get_blood_type_count($data): array
+function get_vout_type_count($data): array
 {
-    $blood_type_count = array();
+    $vout_type_count = array();
     foreach ($data as $row) {
-        $bloodType = $row->bloodType;
-        if(!isset($blood_type_count[$bloodType])) {
-            $blood_type_count[$bloodType] = 0;
+        $vout = $row->vout;
+        if(!isset($vout_type_count[$vout])) {
+            $vout_type_count[$vout] = 0;
         }
-        $blood_type_count[$bloodType] += 1;
+        $vout_type_count[$vout] += 1;
     }
-    return $blood_type_count;
+    return $vout_type_count;
 }
 
 function get_month_count($data): array
@@ -49,27 +49,16 @@ function get_day_blood_tuple(): array {
     $data = get_raw_data();
     $humidity_array = array();
     $time_array = array();
-    $humidity_keys = array();
-    $time_keys = array();
+    $time = array_column($data, 'time');
+
+    array_multisort($time, SORT_ASC, $data);
     foreach ($data as $row) {
-        if (!in_array($row->humidity, $humidity_keys)) {
-            $humidity_keys[] = $row->humidity;
-        }
-        if (!in_array($row->time, $time_keys)) {
-            $time_keys[] =$row->time;
-        }
-    }
-    $day_keys = array_flip($day_keys);
-    $time_keys = array_flip($time_keys);
-    foreach ($data as $row) {
-        $day_array[] = $day_keys[$row->weekday];
-        $blood_array[] = $time_keys[$row->bloodType];
+        $humidity_array[] = $row->humidity;
+        $time_array[] = $row->time;
     }
     return array(
-        "day" => $day_array,
-        "blood" => $blood_array,
-        "day_keys" => array_values($day_keys),
-        "blood_keys" => array_values($blood_keys)
+        "humidity" => $humidity_array,
+        "time" => $time_array
     );
 }
 
