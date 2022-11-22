@@ -18,4 +18,6 @@ if ($ext != "pdf") {
 }
 echo "</div>";
 ?>
-<a href="files.php">К списку</a>
+<div class="exile">
+    <a href="files.php">К списку</a>
+</div>
