@@ -16,7 +16,7 @@ require "session.php";
 <ol>
     <?php
     $mysqli = new mysqli("db", "root", "example", "appDB");
-    $result = $mysqli->query("SELECT * FROM student");
+    $result = $mysqli->query("SELECT * FROM articles");
     foreach ($result as $row) {
         echo "<li>{$row['author']} '{$row['title']}' </li>";
     }
