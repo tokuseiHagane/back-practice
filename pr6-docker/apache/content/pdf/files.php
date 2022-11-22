@@ -7,33 +7,32 @@
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-<form enctype="multipart/form-data" action="loader.php" method="POST">
-    <div>
-    <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
-    <br>
-    <label class="custom-file-label" for="file_field">Отправить этот файл:</label>
-    <br>
-    <input class="custom-file-input" id="file_field" name="userfile" type="file"/>
-    </div>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Отправить файл"/>
-</form>
+<body style="margin-left: 2%;">
+    <form enctype="multipart/form-data" action="loader.php" method="POST">
+        <div>
+            <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+            <label class="custom-file-label" for="file_field">Отправить этот файл:</label>
+            <input class="but" id="file_field" name="userfile" type="file"/>
+        </div>
+        <button>Отправить файл</button>
+    </form>
 
-
-<?php
-$files = scandir('./files');
-if (count($files) <= 2) {
-    echo "<h2>Нет загруженных файлов</h2>";
-} else {
-    echo "<h2>Загруженные файлы</h2>";
-    foreach ($files as $file) {
-        if ($file != "." and $file != "..") {
-            echo "<div class='card'><a class='card-body' href='./files/".$file."'>".$file."</a></div>";
+<div class="list_file">
+    <?php
+    $files = scandir('./files');
+    if (count($files) <= 2) {
+        echo "<h2>Нет загруженных файлов</h2>";
+    } else {
+        echo "<h2>Загруженные файлы</h2>";
+        foreach ($files as $file) {
+            if ($file != "." and $file != "..") {
+                echo "<div class='list_element'><a href='./files/".$file."'>".$file."</a></div>";
+            }
         }
     }
-}
-?>
+    ?>
+</div>
 </body>
 </html>
