@@ -21,19 +21,20 @@
     <input class="btn btn-primary" type="submit" value="Отправить файл"/>
 </form>
 
-
-<?php
-$files = scandir('./files');
-if (count($files) <= 2) {
-    echo "<h2>Нет загруженных файлов</h2>";
-} else {
-    echo "<h2>Загруженные файлы</h2>";
-    foreach ($files as $file) {
-        if ($file != "." and $file != "..") {
-            echo "<div class='card'><a class='card-body' href='./files/".$file."'>".$file."</a></div>";
+<div>
+    <?php
+    $files = scandir('./files');
+    if (count($files) <= 2) {
+        echo "<h2>Нет загруженных файлов</h2>";
+    } else {
+        echo "<h2>Загруженные файлы</h2>";
+        foreach ($files as $file) {
+            if ($file != "." and $file != "..") {
+                echo "<div class='card'><a class='card-body' href='./files/".$file."'>".$file."</a></div>";
+            }
         }
     }
-}
-?>
+    ?>
+</div>
 </body>
 </html>
