@@ -4,6 +4,7 @@ WORKDIR /var/www/html/
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN docker-php-ext-install mysqli && \
+    docker-php-ext-install pdo pdo_mysql && \
     a2enmod authn_dbd && \
     pecl install -o -f redis && \
     rm -rf /tmp/pear && \
@@ -13,6 +14,7 @@ RUN docker-php-ext-install mysqli && \
     apt-get install -y git && \
     apt-get install -y libpng-dev && \
     apt-get install -y zip unzip && \
+    apache2-utils && \
     docker-php-ext-install gd
 COPY ./content/composer.json ./
 RUN composer update && \
