@@ -18,7 +18,7 @@ require "session.php";
             <h1>Список авторов</h1>
             <ol>
                 <?php
-                $mysqli = new mysqli("db", "root", "example", "appDB");
+                $mysqli = new mysqli("db", "root", "example", "appDB2");
                 $result = $mysqli->query("SELECT * FROM authors");
                 foreach ($result as $row) {
                     echo "<li>{$row['surname']} {$row['name']}</li>";

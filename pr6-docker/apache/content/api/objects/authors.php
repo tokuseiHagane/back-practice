@@ -7,7 +7,7 @@ class Authors
 
     public $id;
     public $name;
-    public $surName;
+    public $surname;
     public $age;
 
     public function __construct($db)
@@ -17,7 +17,7 @@ class Authors
 
     function read()
     {
-        $query = "SELECT id, name, surName, age FROM " . $this->table_name;
+        $query = "SELECT id, name, surname, age FROM " . $this->table_name;
 
         $stmt = $this->connect->prepare($query);
 
@@ -27,16 +27,16 @@ class Authors
 
     function create()
     {
-        $query = "INSERT INTO " . $this->table_name . " SET name=:name, surName=:surName, age=:age";
+        $query = "INSERT INTO " . $this->table_name . " SET name=:name, surname=:surname, age=:age";
 
         $stmt = $this->connect->prepare($query);
 
         $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->surName = htmlspecialchars(strip_tags($this->surName));
+        $this->surname = htmlspecialchars(strip_tags($this->surname));
         $this->age = htmlspecialchars(strip_tags($this->age));
 
         $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":surName", $this->surName);
+        $stmt->bindParam(":surname", $this->surname);
         $stmt->bindParam(":age", $this->age);
 
         if ($stmt->execute()) {
@@ -48,31 +48,31 @@ class Authors
     function update()
     {
         $this->id = htmlspecialchars(strip_tags($this->id));
-        $sql = "SELECT name, description FROM " . $this->table_name . " WHERE id = " . $this->id;
+        $sql = "SELECT name, surname, age FROM " . $this->table_name . " WHERE id = " . $this->id;
         if (empty($this->connect->query($sql)->fetch(PDO::FETCH_ASSOC))) {
             return false;
         }
         $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->surName = htmlspecialchars(strip_tags($this->surName));
+        $this->surname = htmlspecialchars(strip_tags($this->surname));
         $this->age = htmlspecialchars(strip_tags($this->age));
 
 
-        if (!empty($this->name) && !empty($this->surName) && !empty($this->age)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = :surName, age = :age WHERE id = :id";
-        } elseif (!empty($this->name) && !empty($this->surName)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = :surName, age = age WHERE id = :id";
+        if (!empty($this->name) && !empty($this->surname) && !empty($this->age)) {
+            $query = "UPDATE " . $this->table_name . " SET name = :name, surname = :surname, age = :age WHERE id = :id";
+        } elseif (!empty($this->name) && !empty($this->surname)) {
+            $query = "UPDATE " . $this->table_name . " SET name = :name, surname = :surname, age = age WHERE id = :id";
         } elseif (!empty($this->name)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = surName, age = age WHERE id = :id";
+            $query = "UPDATE " . $this->table_name . " SET name = :name, surname = surname, age = age WHERE id = :id";
         } else {
-            $query = "UPDATE " . $this->table_name . " SET name = name, surName = surName, age = age WHERE id = :id";
+            $query = "UPDATE " . $this->table_name . " SET name = name, surname = surname, age = age WHERE id = :id";
         }
 
         $stmt = $this->connect->prepare($query);
         if (!empty($this->name)) {
             $stmt->bindParam(":name", $this->name);
         }
-        if (!empty($this->surName)) {
-            $stmt->bindParam(":surName", $this->surName);
+        if (!empty($this->surname)) {
+            $stmt->bindParam(":surname", $this->surname);
         }
         if (!empty($this->age)) {
             $stmt->bindParam(":age", $this->age);
@@ -87,7 +87,7 @@ class Authors
 
     function delete()
     {
-        $sql = "SELECT id, name, surName, age FROM " . $this->table_name . " WHERE id = ?";
+        $sql = "SELECT id, name, surname, age FROM " . $this->table_name . " WHERE id = ?";
 
         if ($sql == false)
             return false;

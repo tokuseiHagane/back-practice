@@ -18,7 +18,7 @@ require "session.php";
         <h1>Список статей</h1>
         <ol>
             <?php
-            $mysqli = new mysqli("db", "root", "example", "appDB");
+            $mysqli = new mysqli("db", "root", "example", "appDB2");
             $result = $mysqli->query("SELECT * FROM articles");
             foreach ($result as $row) {
                 echo "<li>{$row['author']} '{$row['title']}' </li>";

@@ -17,9 +17,15 @@ class Articles
 
     function read()
     {
-        $query = "SELECT id, title, content, author FROM " . $this->table_name;
+        $query = "SELECT ID, title, content, author FROM " . $this->table_name;
 
-        $stmt = $this->connect->prepare($query);
+        try {
+            $stmt = $this->connect->prepare($query);
+            // $this->connect->exec("set names utf8");
+        } catch (PDOException $exception) {
+            echo "Ошибка подключения: " . $exception->getMessage();
+        }
+        
 
         $stmt->execute();
         return $stmt;
