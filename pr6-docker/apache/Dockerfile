@@ -17,6 +17,5 @@ RUN docker-php-ext-install mysqli && \
     apt-get install -y apache2-utils && \
     docker-php-ext-install gd
 COPY ./content/composer.json ./
-RUN composer update && \
-    composer install && \
-    service apache2 restart
+RUN composer update
+RUN composer install

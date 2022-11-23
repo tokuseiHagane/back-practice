@@ -12,7 +12,7 @@
 <body style="margin-left: 2%;">
     <form enctype="multipart/form-data" action="loader.php" method="POST">
         <div>
-            <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+            <!-- <input type="hidden" name="MAX_FILE_SIZE" value="20000000"/> -->
             <label class="custom-file-label" for="file_field">Отправить этот файл:</label>
             <input class="but" id="file_field" name="userfile" type="file"/>
         </div>
