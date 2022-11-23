@@ -1,14 +1,14 @@
 <?php
 
-class Authors
+class Mus
 {
     private $connect;
-    private $table_name = "authors";
+    private $table_name = "mus";
 
     public $id;
     public $name;
-    public $surName;
-    public $age;
+    public $autors;
+    public $time;
 
     public function __construct($db)
     {
@@ -17,7 +17,7 @@ class Authors
 
     function read()
     {
-        $query = "SELECT id, name, surName, age FROM " . $this->table_name;
+        $query = "SELECT id, name, autors, time FROM " . $this->table_name;
 
         $stmt = $this->connect->prepare($query);
 
@@ -27,17 +27,17 @@ class Authors
 
     function create()
     {
-        $query = "INSERT INTO " . $this->table_name . " SET name=:name, surName=:surName, age=:age";
+        $query = "INSERT INTO " . $this->table_name . " SET name=:name, autors=:autors, time=:time";
 
         $stmt = $this->connect->prepare($query);
 
         $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->surName = htmlspecialchars(strip_tags($this->surName));
-        $this->age = htmlspecialchars(strip_tags($this->age));
+        $this->autors = htmlspecialchars(strip_tags($this->autors));
+        $this->time = htmlspecialchars(strip_tags($this->time));
 
         $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":surName", $this->surName);
-        $stmt->bindParam(":age", $this->age);
+        $stmt->bindParam(":autors", $this->autors);
+        $stmt->bindParam(":time", $this->time);
 
         if ($stmt->execute()) {
             return true;
@@ -53,29 +53,29 @@ class Authors
             return false;
         }
         $this->name = htmlspecialchars(strip_tags($this->name));
-        $this->surName = htmlspecialchars(strip_tags($this->surName));
-        $this->age = htmlspecialchars(strip_tags($this->age));
+        $this->autors = htmlspecialchars(strip_tags($this->autors));
+        $this->time = htmlspecialchars(strip_tags($this->time));
 
 
-        if (!empty($this->name) && !empty($this->surName) && !empty($this->age)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = :surName, age = :age WHERE id = :id";
-        } elseif (!empty($this->name) && !empty($this->surName)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = :surName, age = age WHERE id = :id";
+        if (!empty($this->name) && !empty($this->autors) && !empty($this->time)) {
+            $query = "UPDATE " . $this->table_name . " SET name = :name, autors = :autors, time = :time WHERE id = :id";
+        } elseif (!empty($this->name) && !empty($this->autors)) {
+            $query = "UPDATE " . $this->table_name . " SET name = :name, autors = :autors, time = time WHERE id = :id";
         } elseif (!empty($this->name)) {
-            $query = "UPDATE " . $this->table_name . " SET name = :name, surName = surName, age = age WHERE id = :id";
+            $query = "UPDATE " . $this->table_name . " SET name = :name, autors = autors, time = time WHERE id = :id";
         } else {
-            $query = "UPDATE " . $this->table_name . " SET name = name, surName = surName, age = age WHERE id = :id";
+            $query = "UPDATE " . $this->table_name . " SET name = name, autors = autors, time = time WHERE id = :id";
         }
 
         $stmt = $this->connect->prepare($query);
         if (!empty($this->name)) {
             $stmt->bindParam(":name", $this->name);
         }
-        if (!empty($this->surName)) {
-            $stmt->bindParam(":surName", $this->surName);
+        if (!empty($this->autors)) {
+            $stmt->bindParam(":autors", $this->autors);
         }
-        if (!empty($this->age)) {
-            $stmt->bindParam(":age", $this->age);
+        if (!empty($this->time)) {
+            $stmt->bindParam(":time", $this->time);
         }
         $stmt->bindParam(":id", $this->id);
 
@@ -87,7 +87,7 @@ class Authors
 
     function delete()
     {
-        $sql = "SELECT id, name, surName, age FROM " . $this->table_name . " WHERE id = ?";
+        $sql = "SELECT id, name, autors, time FROM " . $this->table_name . " WHERE id = ?";
 
         if ($sql == false)
             return false;

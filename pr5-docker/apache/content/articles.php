@@ -19,9 +19,9 @@ require "session.php";
         <ol>
             <?php
             $mysqli = new mysqli("db", "root", "example", "appDB");
-            $result = $mysqli->query("SELECT * FROM articles");
+            $result = $mysqli->query("SELECT * FROM hero");
             foreach ($result as $row) {
-                echo "<li>{$row['author']} '{$row['title']}' </li>";
+                echo "<li>{$row['name']} '{$row['info']}' </li>";
             }
             ?>
         </ol>

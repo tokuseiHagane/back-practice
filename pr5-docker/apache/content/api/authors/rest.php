@@ -2,43 +2,45 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: PATCH, POST, DELETE, GET");
-header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Max-time: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, musization, X-Requested-With");
 
 
 include_once "../config/database.php";
-include_once "../objects/authors.php";
+include_once "../objects/Mus.php";
 
 $database = new Database();
 $db = $database->getConnection();
-$author = new Authors($db);
+$mus = new Mus($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$request = $_GET["request"];
+
+if ($request == "create") {
     if (
         !empty($data->name) &&
-        !empty($data->surName) &&
-        !empty($data->age)
+        !empty($data->autors) &&
+        !empty($data->time)
         
     ) {
-        $author->name = $data->name;
-        $author->surName = $data->surName;
-        $author->age = $data->age;
+        $mus->name = $data->name;
+        $mus->autors = $data->autors;
+        $mus->time = $data->time;
     
-        if ($author->create()) {
+        if ($mus->create()) {
             http_response_code(201);
-            echo json_encode(array("message" => "Добавлен автор"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("messtime" => "Музыка была записана"), JSON_UNESCAPED_UNICODE);
         } else {
             http_response_code(503);
-            echo json_encode(array("message" => "Невозможно записать автора"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("messtime" => "Невозможно записать музыку"), JSON_UNESCAPED_UNICODE);
         }
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Невозможно записать автора. Данные неполные."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("messtime" => "Невозможно записать музыку. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $stmt = $author->read();
+} elseif ($request == "read") {
+    $stmt = $mus->read();
     $num = $stmt->rowCount();
 
     if ($num > 0) {
@@ -47,40 +49,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($result);
     } else {
         http_response_code(404);
-        echo json_encode(array("message" => "Авторы не найдены."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("messtime" => "Музыка не найдены."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
-    $author->id = $_GET["id"];
+} elseif ($request == "update") {
+    $mus->id = $_GET["id"];
     if (!empty($data->name)) {
-        $author->name = $data->name;
+        $mus->name = $data->name;
     }
-    if (!empty($data->surName)) {
-        $author->surName = $data->surName;
+    if (!empty($data->autors)) {
+        $mus->autors = $data->autors;
     }
-    if (!empty($data->age)) {
-        $author->age = $data->age;
+    if (!empty($data->time)) {
+        $mus->time = $data->time;
     }
-    if ($author->update()) {
+    if ($mus->update()) {
         http_response_code(200);
     
-        echo json_encode(array("message" => "Автор была обновлена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("messtime" => "Музыка была обновлена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
     
-        echo json_encode(array("message" => "Невозможно обновить автора"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("messtime" => "Невозможно обновить музыку"), JSON_UNESCAPED_UNICODE);
     }
 
-} elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    $author->id = $_GET["id"];
+} elseif ($request == "delete") {
+    $mus->id = $_GET["id"];
 
-    if ($author->delete()) {
+    if ($mus->delete()) {
         http_response_code(200);
-        echo json_encode(array("message" => "Автор удалена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("messtime" => "Музыка удалена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
-        echo json_encode(array("message" => "Не удалось удалить автора"));
+        echo json_encode(array("messtime" => "Не удалось удалить музыку"));
     }
 } else {
     http_response_code(500);
-    echo json_encode(array("message" => "Неопределённый запрос"), JSON_UNESCAPED_UNICODE);
+    echo json_encode(array("messtime" => "Неопределённый запрос"), JSON_UNESCAPED_UNICODE);
 }

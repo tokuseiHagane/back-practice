@@ -19,9 +19,9 @@ require "session.php";
             <ol>
                 <?php
                 $mysqli = new mysqli("db", "root", "example", "appDB");
-                $result = $mysqli->query("SELECT * FROM authors");
+                $result = $mysqli->query("SELECT * FROM mus");
                 foreach ($result as $row) {
-                    echo "<li>{$row['surname']} {$row['name']}</li>";
+                    echo "<li>{$row['name']} {$row['autors']}</li>";
                 }
                 ?>
             </ol>

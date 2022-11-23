@@ -1,44 +1,46 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+header("info-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: PATCH, POST, DELETE, GET");
 header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Allow-Headers: info-Type, Access-Control-Allow-Headers, dmgization, X-Requested-With");
 
 
 include_once "../config/database.php";
-include_once "../objects/articles.php";
+include_once "../objects/Hero.php";
 
 $database = new Database();
 $db = $database->getConnection();
-$article = new Articles($db);
+$hero = new Hero($db);
 
-$data = json_decode(file_get_contents("php://input"));
+$data = json_decode(file_get_infos("php://input"));
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$request = $_GET["request"];
+
+if ($request == "create") {
     if (
-        !empty($data->title) &&
-        !empty($data->content) &&
-        !empty($data->author)
+        !empty($data->name) &&
+        !empty($data->info) &&
+        !empty($data->dmg)
         
     ) {
-        $article->title = $data->title;
-        $article->content = $data->content;
-        $article->author = $data->author;
+        $hero->name = $data->name;
+        $hero->info = $data->info;
+        $hero->dmg = $data->dmg;
     
-        if ($article->create()) {
+        if ($hero->create()) {
             http_response_code(201);
-            echo json_encode(array("message" => "Статья была записана"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Герой была записана"), JSON_UNESCAPED_UNICODE);
         } else {
             http_response_code(503);
-            echo json_encode(array("message" => "Невозможно записать статью"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Невозможно записать Героя"), JSON_UNESCAPED_UNICODE);
         }
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Невозможно записать статью. Данные неполные."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно записать Героя. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $stmt = $article->read();
+} elseif ($request == "read") {
+    $stmt = $hero->read();
     $num = $stmt->rowCount();
 
     if ($num > 0) {
@@ -47,38 +49,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($result);
     } else {
         http_response_code(404);
-        echo json_encode(array("message" => "Статьи не найдены."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Герои не найдены."), JSON_UNESCAPED_UNICODE);
     }
-} elseif ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
-    $article->id = $_GET["id"];
-    if (!empty($data->title)) {
-        $article->title = $data->title;
+} elseif ($request == "update") {
+    $hero->id = $_GET["id"];
+    if (!empty($data->name)) {
+        $hero->name = $data->name;
     }
-    if (!empty($data->content)) {
-        $article->content = $data->content;
+    if (!empty($data->info)) {
+        $hero->info = $data->info;
     }
-    if (!empty($data->author)) {
-        $article->author = $data->author;
+    if (!empty($data->dmg)) {
+        $hero->dmg = $data->dmg;
     }
-    if ($article->update()) {
+    if ($hero->update()) {
         http_response_code(200);
     
-        echo json_encode(array("message" => "Статья была обновлена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Герой была обновлена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
     
-        echo json_encode(array("message" => "Невозможно обновить статью"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно обновить Героя"), JSON_UNESCAPED_UNICODE);
     }
 
-} elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    $article->id = $_GET["id"];
+} elseif ($request == "delete") {
+    $hero->id = $_GET["id"];
 
-    if ($article->delete()) {
+    if ($hero->delete()) {
         http_response_code(200);
-        echo json_encode(array("message" => "Статья удалена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Герой удалена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
-        echo json_encode(array("message" => "Не удалось удалить статью"));
+        echo json_encode(array("message" => "Не удалось удалить Героя"));
     }
 } else {
     http_response_code(500);
