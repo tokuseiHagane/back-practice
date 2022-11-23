@@ -21,7 +21,6 @@ class Articles
 
         try {
             $stmt = $this->connect->prepare($query);
-            // $this->connect->exec("set names utf8");
         } catch (PDOException $exception) {
             echo "Ошибка подключения: " . $exception->getMessage();
         }
