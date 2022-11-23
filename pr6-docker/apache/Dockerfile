@@ -14,7 +14,7 @@ RUN docker-php-ext-install mysqli && \
     apt-get install -y git && \
     apt-get install -y libpng-dev && \
     apt-get install -y zip unzip && \
-    apache2-utils && \
+    apt-get install -y apache2-utils && \
     docker-php-ext-install gd
 COPY ./content/composer.json ./
 RUN composer update && \
