@@ -7,11 +7,11 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 
 include_once "../config/database.php";
-include_once "../objects/articles.php";
+include_once "../objects/books.php";
 
 $database = new Database();
 $db = $database->getConnection();
-$article = new Articles($db);
+$book = new Books($db);
 
 $data = json_decode(file_get_contents("php://input"));
 
@@ -22,23 +22,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         !empty($data->author)
         
     ) {
-        $article->title = $data->title;
-        $article->content = $data->content;
-        $article->author = $data->author;
+        $book->title = $data->title;
+        $book->content = $data->content;
+        $book->author = $data->author;
     
-        if ($article->create()) {
+        if ($book->create()) {
             http_response_code(201);
-            echo json_encode(array("message" => "Статья была записана"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Книга была внесена"), JSON_UNESCAPED_UNICODE);
         } else {
             http_response_code(503);
-            echo json_encode(array("message" => "Невозможно записать статью"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Невозможно внести книгу"), JSON_UNESCAPED_UNICODE);
         }
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Невозможно записать статью. Данные неполные."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно внести книгу. Данные неполные."), JSON_UNESCAPED_UNICODE);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $stmt = $article->read();
+    $stmt = $book->read();
     $num = $stmt->rowCount();
 
     if ($num > 0) {
@@ -47,38 +47,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($result);
     } else {
         http_response_code(404);
-        echo json_encode(array("message" => "Статьи не найдены."), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Книги не найдены."), JSON_UNESCAPED_UNICODE);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
-    $article->id = $_GET["id"];
+    $book->id = $_GET["id"];
     if (!empty($data->title)) {
-        $article->title = $data->title;
+        $book->title = $data->title;
     }
     if (!empty($data->content)) {
-        $article->content = $data->content;
+        $book->content = $data->content;
     }
     if (!empty($data->author)) {
-        $article->author = $data->author;
+        $book->author = $data->author;
     }
-    if ($article->update()) {
+    if ($book->update()) {
         http_response_code(200);
     
-        echo json_encode(array("message" => "Статья была обновлена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Книга была обновлена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
     
-        echo json_encode(array("message" => "Невозможно обновить статью"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно обновить книгу"), JSON_UNESCAPED_UNICODE);
     }
 
 } elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    $article->id = $_GET["id"];
+    $book->id = $_GET["id"];
 
-    if ($article->delete()) {
+    if ($book->delete()) {
         http_response_code(200);
-        echo json_encode(array("message" => "Статья удалена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Книга удалена"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
-        echo json_encode(array("message" => "Не удалось удалить статью"));
+        echo json_encode(array("message" => "Не удалось удалить книгу"));
     }
 } else {
     http_response_code(500);

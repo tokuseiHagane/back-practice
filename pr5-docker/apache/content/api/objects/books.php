@@ -1,9 +1,9 @@
 <?php
 
-class Articles
+class Books
 {
     private $connect;
-    private $table_name = "articles";
+    private $table_name = "books";
 
     public $id;
     public $title;
@@ -27,7 +27,6 @@ class Articles
 
     function create()
     {
-        
         $query = "INSERT INTO " . $this->table_name . " SET title=:title, content=:content, author=:author";
 
         $stmt = $this->connect->prepare($query);
