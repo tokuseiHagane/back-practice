@@ -27,7 +27,7 @@
     } else {
         echo "<h2>Загруженные файлы</h2>";
         foreach ($files as $file) {
-            if ($file != "." and $file != "..") {
+            if ($file != "." && $file != "..") {
                 echo "<div class='list_element'><a href='./files/".$file."'>".$file."</a></div>";
             }
         }
