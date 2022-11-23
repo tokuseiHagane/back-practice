@@ -36,6 +36,9 @@ ul{
     background: rgba(6, 97, 133, 0.651);
     border-radius: 25px;
 }
+.main_content div:first-child li{
+    color:rgb(255, 255, 255);
+}
 .exile{display: flex; gap: 10px;}
 .main_content_block{
     display: flex;
@@ -50,8 +53,8 @@ a{
     text-decoration: none;
 }
 .exile a{
-    color: rgb(158, 8, 138);
-    background: rgba(73, 72, 72, 0.308);
+    color: rgb(255, 255, 255);
+    background: rgb(12, 55, 75);
     border-radius: 25px;
 }
 .exile{display: flex; gap: 10px;}
@@ -75,14 +78,14 @@ a{
 button{
     margin-top: 10px;
     border: none;
-    color: rgb(158, 8, 138);
+    color: rgb(255, 255, 255);
     padding: 10px 15px 10px 15px;
-    background: rgb(75, 12, 72);
+    background: rgb(12, 55, 75);
     border-radius: 25px;
     transition: all 0.5s cubic-bezier(1,-1.53,.52,1.53);
 }
 .but{
-    background: rgb(75, 12, 72);
+    background: rgb(12, 55, 75);
     border-radius: 25px;
     color: aliceblue;
 }
@@ -91,17 +94,25 @@ form div{
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background: rgba(73, 72, 72, 0.651);
+    background: rgba(6, 97, 133, 0.651);
     border-radius: 25px;
+}
+form div label{
+    color:rgb(255, 255, 255);
 }
 .list_file{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     gap: 10px;
     padding: 20px;
-    background: rgba(73, 72, 72, 0.651);
+    background: rgba(6, 97, 133, 0.651);
     border-radius: 25px;
+}
+.list_file h2{
+    color:rgb(255, 255, 255);
 }
 .list_element{
     display: flex;
@@ -109,9 +120,12 @@ form div{
     justify-content: center;
     border-radius: 25px;
     padding: 10px;
-    background: rgba(102, 2, 85, 0.295);
+    margin-bottom: 10px;
+    background: rgb(12, 55, 75);
+    width: initial;
 }
 .list_element a{
-    color: rgb(32, 1, 28);
+    color: rgb(255, 250, 254);
+    font-size: 20px;
 }
 
