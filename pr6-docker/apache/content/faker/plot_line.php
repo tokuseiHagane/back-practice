@@ -13,9 +13,9 @@ require_once 'data_load.php';
 
 function draw_plot_scatter()
 {
-    $data = get_day_blood_tuple();
-    $datax = $data["time"];
-    $datay = $data["humidity"];
+    $data = get_daily_attendance();
+    $datax = $data["daystart"];
+    $datay = $data["clientCount"];
     $__width = 400;
     $__height = 300;
     $graph = new Graph\Graph($__width, $__height);
@@ -24,7 +24,7 @@ function draw_plot_scatter()
     $graph->img->SetMargin(40, 40, 40, 40);
     $graph->SetShadow();
     $graph->SetScale('intint');
-    $graph->title->Set('Humidity line plot');
+    $graph->title->Set('Number of clients');
     $graph->title->SetFont(FF_FONT1, FS_BOLD);
 
 

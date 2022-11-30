@@ -5,11 +5,13 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: appDB
     volumes:
       - ./mysql:/docker-entrypoint-initdb.d:ro
       - db_volume:/var/lib/mysql
     ports:
       - "3308:3306"
+
   nginx:
     image: nginx
     restart: always
@@ -20,6 +22,7 @@ services:
       - "80:80"
     links:
       - db
+
   apache:
     build: ./apache
     restart: always

@@ -9,16 +9,13 @@ require_once 'data_load.php';
 function draw_plot_pie()
 {
     $graph = new Graph\PieGraph(400, 300);
-    $graph->title->Set("Temperature pie");
+    $graph->title->Set("Services pie");
     $graph->title->SetFont(FF_FONT1, FS_BOLD);
     $graph->SetBox(true);
 
-    $labels_and_values = get_labels_and_values('get_temp_count');
+    $labels_and_values = get_labels_and_values('get_services_count');
     $labels = $labels_and_values["labels"];
 
-    for ($i = 0; $i < count($labels); $i++) {
-        $labels[$i] = $labels[$i]." Cels";
-    }
     $values = $labels_and_values["values"];
 
     $p1 = new Plot\PiePlot($values);

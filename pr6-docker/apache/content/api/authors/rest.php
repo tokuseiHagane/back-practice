@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
         if ($author->create()) {
             http_response_code(201);
-            echo json_encode(array("message" => "Добавлен автор"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Автор был внесён"), JSON_UNESCAPED_UNICODE);
         } else {
             http_response_code(503);
-            echo json_encode(array("message" => "Невозможно записать автора"), JSON_UNESCAPED_UNICODE);
+            echo json_encode(array("message" => "Невозможно внести автора"), JSON_UNESCAPED_UNICODE);
         }
     } else {
         http_response_code(400);
@@ -63,11 +63,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($author->update()) {
         http_response_code(200);
     
-        echo json_encode(array("message" => "Автор была обновлена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Автор была изменён"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
     
-        echo json_encode(array("message" => "Невозможно обновить автора"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Невозможно изменить автора"), JSON_UNESCAPED_UNICODE);
     }
 
 } elseif ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
@@ -75,10 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($author->delete()) {
         http_response_code(200);
-        echo json_encode(array("message" => "Автор удалена"), JSON_UNESCAPED_UNICODE);
+        echo json_encode(array("message" => "Автора отменили"), JSON_UNESCAPED_UNICODE);
     } else {
         http_response_code(503);
-        echo json_encode(array("message" => "Не удалось удалить автора"));
+        echo json_encode(array("message" => "Не удалось отменить автора"));
     }
 } else {
     http_response_code(500);

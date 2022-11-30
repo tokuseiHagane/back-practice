@@ -1,452 +1,352 @@
 [
     {
-        "vin": "23.2",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "760",
-        "humidity": "756",
-        "soundLevel": "227",
-        "time": "1669097700"
+        "employeeCount": "1",
+        "clientCount": "11",
+        "services": "Yoga",
+        "daystart": "1666038909",
+        "dayend": "1666067709"
     },
     {
-        "vin": "23.9",
-        "vout": "5",
-        "temperature": "20.5",
-        "pressure": "756",
-        "humidity": "418",
-        "soundLevel": "466",
-        "time": "1669124026"
+        "employeeCount": "29",
+        "clientCount": "15",
+        "services": "Pilates",
+        "daystart": "1666122589",
+        "dayend": "1666151389"
     },
     {
-        "vin": "23.7",
-        "vout": "5",
-        "temperature": "20.3",
-        "pressure": "750",
-        "humidity": "545",
-        "soundLevel": "765",
-        "time": "1669124686"
+        "employeeCount": "12",
+        "clientCount": "7",
+        "services": "Yoga",
+        "daystart": "1665941107",
+        "dayend": "1665969907"
     },
     {
-        "vin": "23.8",
-        "vout": "5",
-        "temperature": "20.2",
-        "pressure": "757",
-        "humidity": "564",
-        "soundLevel": "335",
-        "time": "1669120670"
+        "employeeCount": "18",
+        "clientCount": "45",
+        "services": "Pilates",
+        "daystart": "1665542679",
+        "dayend": "1665571479"
     },
     {
-        "vin": "23.4",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "750",
-        "humidity": "573",
-        "soundLevel": "804",
-        "time": "1669094150"
+        "employeeCount": "14",
+        "clientCount": "20",
+        "services": "Fullbody",
+        "daystart": "1665897803",
+        "dayend": "1665926603"
     },
     {
-        "vin": "23.9",
-        "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "765",
-        "humidity": "283",
-        "soundLevel": "625",
-        "time": "1669068671"
+        "employeeCount": "2",
+        "clientCount": "19",
+        "services": "Fullbody",
+        "daystart": "1666213186",
+        "dayend": "1666241986"
     },
     {
-        "vin": "23.6",
-        "vout": "5",
-        "temperature": "20.1",
-        "pressure": "747",
-        "humidity": "657",
-        "soundLevel": "908",
-        "time": "1669084477"
+        "employeeCount": "30",
+        "clientCount": "46",
+        "services": "Yoga",
+        "daystart": "1665706792",
+        "dayend": "1665735592"
     },
     {
-        "vin": "23.8",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "761",
-        "humidity": "493",
-        "soundLevel": "207",
-        "time": "1669119203"
+        "employeeCount": "12",
+        "clientCount": "20",
+        "services": "Yoga",
+        "daystart": "1666138235",
+        "dayend": "1666167035"
     },
     {
-        "vin": "23",
-        "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "761",
-        "humidity": "562",
-        "soundLevel": "588",
-        "time": "1669074301"
+        "employeeCount": "5",
+        "clientCount": "51",
+        "services": "Swimm",
+        "daystart": "1665918477",
+        "dayend": "1665947277"
     },
     {
-        "vin": "23.2",
-        "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "753",
-        "humidity": "509",
-        "soundLevel": "109",
-        "time": "1669089539"
+        "employeeCount": "15",
+        "clientCount": "7",
+        "services": "Fullbody",
+        "daystart": "1665560462",
+        "dayend": "1665589262"
     },
     {
-        "vin": "23.2",
-        "vout": "4.8",
-        "temperature": "20.1",
-        "pressure": "745",
-        "humidity": "282",
-        "soundLevel": "925",
-        "time": "1669092746"
+        "employeeCount": "25",
+        "clientCount": "50",
+        "services": "Swimm",
+        "daystart": "1665456990",
+        "dayend": "1665485790"
     },
     {
-        "vin": "23.2",
-        "vout": "4.8",
-        "temperature": "20.5",
-        "pressure": "755",
-        "humidity": "430",
-        "soundLevel": "762",
-        "time": "1669149894"
+        "employeeCount": "11",
+        "clientCount": "19",
+        "services": "Yoga",
+        "daystart": "1666137636",
+        "dayend": "1666166436"
     },
     {
-        "vin": "23.4",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "761",
-        "humidity": "626",
-        "soundLevel": "103",
-        "time": "1669137643"
+        "employeeCount": "5",
+        "clientCount": "15",
+        "services": "Yoga",
+        "daystart": "1665457524",
+        "dayend": "1665486324"
     },
     {
-        "vin": "23",
-        "vout": "4.9",
-        "temperature": "20",
-        "pressure": "756",
-        "humidity": "542",
-        "soundLevel": "118",
-        "time": "1669078075"
+        "employeeCount": "5",
+        "clientCount": "37",
+        "services": "Swimm",
+        "daystart": "1666082198",
+        "dayend": "1666110998"
     },
     {
-        "vin": "23.7",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "763",
-        "humidity": "212",
-        "soundLevel": "169",
-        "time": "1669076527"
+        "employeeCount": "19",
+        "clientCount": "45",
+        "services": "Fullbody",
+        "daystart": "1665765458",
+        "dayend": "1665794258"
     },
     {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "759",
-        "humidity": "453",
-        "soundLevel": "592",
-        "time": "1669106876"
+        "employeeCount": "28",
+        "clientCount": "31",
+        "services": "Pilates",
+        "daystart": "1665737586",
+        "dayend": "1665766386"
     },
     {
-        "vin": "23.6",
-        "vout": "4.8",
-        "temperature": "20",
-        "pressure": "746",
-        "humidity": "403",
-        "soundLevel": "920",
-        "time": "1669094596"
+        "employeeCount": "29",
+        "clientCount": "17",
+        "services": "Fullbody",
+        "daystart": "1666094503",
+        "dayend": "1666123303"
     },
     {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "759",
-        "humidity": "484",
-        "soundLevel": "254",
-        "time": "1669101947"
+        "employeeCount": "15",
+        "clientCount": "17",
+        "services": "Swimm",
+        "daystart": "1665517056",
+        "dayend": "1665545856"
     },
     {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "765",
-        "humidity": "678",
-        "soundLevel": "170",
-        "time": "1669110997"
+        "employeeCount": "3",
+        "clientCount": "32",
+        "services": "Yoga",
+        "daystart": "1665577436",
+        "dayend": "1665606236"
     },
     {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "760",
-        "humidity": "588",
-        "soundLevel": "894",
-        "time": "1669148560"
+        "employeeCount": "21",
+        "clientCount": "39",
+        "services": "Pilates",
+        "daystart": "1665869982",
+        "dayend": "1665898782"
     },
     {
-        "vin": "23.7",
-        "vout": "5",
-        "temperature": "20.6",
-        "pressure": "757",
-        "humidity": "659",
-        "soundLevel": "170",
-        "time": "1669145206"
+        "employeeCount": "15",
+        "clientCount": "13",
+        "services": "Yoga",
+        "daystart": "1666261831",
+        "dayend": "1666290631"
     },
     {
-        "vin": "23.5",
-        "vout": "4.8",
-        "temperature": "20.3",
-        "pressure": "762",
-        "humidity": "482",
-        "soundLevel": "656",
-        "time": "1669078193"
+        "employeeCount": "13",
+        "clientCount": "7",
+        "services": "Pilates",
+        "daystart": "1665799910",
+        "dayend": "1665828710"
     },
     {
-        "vin": "23.8",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "758",
-        "humidity": "253",
-        "soundLevel": "796",
-        "time": "1669078510"
+        "employeeCount": "23",
+        "clientCount": "51",
+        "services": "Swimm",
+        "daystart": "1665904244",
+        "dayend": "1665933044"
     },
     {
-        "vin": "23.3",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "762",
-        "humidity": "490",
-        "soundLevel": "222",
-        "time": "1669143178"
+        "employeeCount": "25",
+        "clientCount": "5",
+        "services": "Yoga",
+        "daystart": "1666093373",
+        "dayend": "1666122173"
     },
     {
-        "vin": "23.3",
-        "vout": "5",
-        "temperature": "20.5",
-        "pressure": "745",
-        "humidity": "732",
-        "soundLevel": "221",
-        "time": "1669147662"
+        "employeeCount": "17",
+        "clientCount": "39",
+        "services": "Pilates",
+        "daystart": "1666208757",
+        "dayend": "1666237557"
     },
     {
-        "vin": "23.8",
-        "vout": "5",
-        "temperature": "20.6",
-        "pressure": "749",
-        "humidity": "444",
-        "soundLevel": "755",
-        "time": "1669111089"
+        "employeeCount": "30",
+        "clientCount": "28",
+        "services": "Fullbody",
+        "daystart": "1665547987",
+        "dayend": "1665576787"
     },
     {
-        "vin": "23.3",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "747",
-        "humidity": "430",
-        "soundLevel": "837",
-        "time": "1669100178"
+        "employeeCount": "5",
+        "clientCount": "55",
+        "services": "Swimm",
+        "daystart": "1665738493",
+        "dayend": "1665767293"
     },
     {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.1",
-        "pressure": "753",
-        "humidity": "240",
-        "soundLevel": "759",
-        "time": "1669092626"
+        "employeeCount": "29",
+        "clientCount": "22",
+        "services": "Pilates",
+        "daystart": "1665855620",
+        "dayend": "1665884420"
     },
     {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "747",
-        "humidity": "736",
-        "soundLevel": "110",
-        "time": "1669123571"
+        "employeeCount": "18",
+        "clientCount": "38",
+        "services": "Pilates",
+        "daystart": "1666205551",
+        "dayend": "1666234351"
     },
     {
-        "vin": "23.5",
-        "vout": "4.9",
-        "temperature": "20",
-        "pressure": "756",
-        "humidity": "683",
-        "soundLevel": "147",
-        "time": "1669148655"
+        "employeeCount": "29",
+        "clientCount": "2",
+        "services": "Yoga",
+        "daystart": "1665975639",
+        "dayend": "1666004439"
     },
     {
-        "vin": "23.7",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "763",
-        "humidity": "245",
-        "soundLevel": "120",
-        "time": "1669074175"
+        "employeeCount": "14",
+        "clientCount": "47",
+        "services": "Swimm",
+        "daystart": "1665658938",
+        "dayend": "1665687738"
     },
     {
-        "vin": "23.8",
-        "vout": "4.8",
-        "temperature": "20.1",
-        "pressure": "756",
-        "humidity": "471",
-        "soundLevel": "254",
-        "time": "1669137169"
+        "employeeCount": "21",
+        "clientCount": "20",
+        "services": "Yoga",
+        "daystart": "1666237568",
+        "dayend": "1666266368"
     },
     {
-        "vin": "23.3",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "748",
-        "humidity": "425",
-        "soundLevel": "670",
-        "time": "1669073219"
+        "employeeCount": "23",
+        "clientCount": "12",
+        "services": "Yoga",
+        "daystart": "1665684291",
+        "dayend": "1665713091"
     },
     {
-        "vin": "23.7",
-        "vout": "4.8",
-        "temperature": "20.2",
-        "pressure": "748",
-        "humidity": "702",
-        "soundLevel": "117",
-        "time": "1669073525"
+        "employeeCount": "12",
+        "clientCount": "43",
+        "services": "Swimm",
+        "daystart": "1665889078",
+        "dayend": "1665917878"
     },
     {
-        "vin": "23.5",
-        "vout": "4.9",
-        "temperature": "20",
-        "pressure": "761",
-        "humidity": "425",
-        "soundLevel": "465",
-        "time": "1669149918"
+        "employeeCount": "22",
+        "clientCount": "12",
+        "services": "Swimm",
+        "daystart": "1666173471",
+        "dayend": "1666202271"
     },
     {
-        "vin": "23.9",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "762",
-        "humidity": "290",
-        "soundLevel": "676",
-        "time": "1669105003"
+        "employeeCount": "10",
+        "clientCount": "49",
+        "services": "Pilates",
+        "daystart": "1665804738",
+        "dayend": "1665833538"
     },
     {
-        "vin": "23.4",
-        "vout": "4.8",
-        "temperature": "20.4",
-        "pressure": "746",
-        "humidity": "252",
-        "soundLevel": "145",
-        "time": "1669104835"
+        "employeeCount": "12",
+        "clientCount": "31",
+        "services": "Fullbody",
+        "daystart": "1665841880",
+        "dayend": "1665870680"
     },
     {
-        "vin": "23.2",
-        "vout": "4.8",
-        "temperature": "20.6",
-        "pressure": "749",
-        "humidity": "403",
-        "soundLevel": "105",
-        "time": "1669120854"
+        "employeeCount": "14",
+        "clientCount": "4",
+        "services": "Fullbody",
+        "daystart": "1665470899",
+        "dayend": "1665499699"
     },
     {
-        "vin": "23.2",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "749",
-        "humidity": "683",
-        "soundLevel": "468",
-        "time": "1669150253"
+        "employeeCount": "8",
+        "clientCount": "43",
+        "services": "Fullbody",
+        "daystart": "1665589976",
+        "dayend": "1665618776"
     },
     {
-        "vin": "23.5",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "753",
-        "humidity": "313",
-        "soundLevel": "134",
-        "time": "1669151314"
+        "employeeCount": "23",
+        "clientCount": "48",
+        "services": "Fullbody",
+        "daystart": "1665681988",
+        "dayend": "1665710788"
     },
     {
-        "vin": "23.4",
-        "vout": "4.9",
-        "temperature": "20.2",
-        "pressure": "746",
-        "humidity": "226",
-        "soundLevel": "475",
-        "time": "1669096577"
+        "employeeCount": "13",
+        "clientCount": "46",
+        "services": "Pilates",
+        "daystart": "1665569079",
+        "dayend": "1665597879"
     },
     {
-        "vin": "23.6",
-        "vout": "4.9",
-        "temperature": "20.3",
-        "pressure": "761",
-        "humidity": "679",
-        "soundLevel": "258",
-        "time": "1669106486"
+        "employeeCount": "10",
+        "clientCount": "27",
+        "services": "Pilates",
+        "daystart": "1665878086",
+        "dayend": "1665906886"
     },
     {
-        "vin": "23",
-        "vout": "4.9",
-        "temperature": "20",
-        "pressure": "766",
-        "humidity": "604",
-        "soundLevel": "489",
-        "time": "1669116116"
+        "employeeCount": "13",
+        "clientCount": "51",
+        "services": "Fullbody",
+        "daystart": "1665625735",
+        "dayend": "1665654535"
     },
     {
-        "vin": "23.3",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "748",
-        "humidity": "493",
-        "soundLevel": "549",
-        "time": "1669125366"
+        "employeeCount": "9",
+        "clientCount": "48",
+        "services": "Pilates",
+        "daystart": "1665496430",
+        "dayend": "1665525230"
     },
     {
-        "vin": "23.2",
-        "vout": "4.9",
-        "temperature": "20.5",
-        "pressure": "760",
-        "humidity": "503",
-        "soundLevel": "525",
-        "time": "1669118644"
+        "employeeCount": "21",
+        "clientCount": "49",
+        "services": "Pilates",
+        "daystart": "1665853575",
+        "dayend": "1665882375"
     },
     {
-        "vin": "23.9",
-        "vout": "5",
-        "temperature": "20.3",
-        "pressure": "745",
-        "humidity": "487",
-        "soundLevel": "747",
-        "time": "1669111255"
+        "employeeCount": "14",
+        "clientCount": "40",
+        "services": "Fullbody",
+        "daystart": "1666169836",
+        "dayend": "1666198636"
     },
     {
-        "vin": "23.7",
-        "vout": "4.8",
-        "temperature": "20.5",
-        "pressure": "759",
-        "humidity": "429",
-        "soundLevel": "975",
-        "time": "1669103417"
+        "employeeCount": "17",
+        "clientCount": "48",
+        "services": "Fullbody",
+        "daystart": "1665458404",
+        "dayend": "1665487204"
     },
     {
-        "vin": "24",
-        "vout": "5",
-        "temperature": "20.1",
-        "pressure": "750",
-        "humidity": "336",
-        "soundLevel": "669",
-        "time": "1669106872"
+        "employeeCount": "1",
+        "clientCount": "47",
+        "services": "Swimm",
+        "daystart": "1665933294",
+        "dayend": "1665962094"
     },
     {
-        "vin": "23",
-        "vout": "4.9",
-        "temperature": "20.4",
-        "pressure": "756",
-        "humidity": "286",
-        "soundLevel": "584",
-        "time": "1669104933"
+        "employeeCount": "3",
+        "clientCount": "18",
+        "services": "Yoga",
+        "daystart": "1666029524",
+        "dayend": "1666058324"
     },
     {
-        "vin": "23.1",
-        "vout": "5",
-        "temperature": "20.2",
-        "pressure": "762",
-        "humidity": "766",
-        "soundLevel": "602",
-        "time": "1669073595"
+        "employeeCount": "1",
+        "clientCount": "4",
+        "services": "Pilates",
+        "daystart": "1666078448",
+        "dayend": "1666107248"
     }
 ]

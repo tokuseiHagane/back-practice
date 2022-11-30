@@ -2,7 +2,7 @@
 function add_watermark($image)
 {
     $image1 = $image;
-    $image2 = 'images/rsz_watermark.png';
+    $image2 = 'images/dio_watermark_50.png';
     list($width, $height) = getimagesize($image2);
 
     $image1 = imagecreatefromstring(file_get_contents($image1));

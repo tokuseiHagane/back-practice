@@ -14,15 +14,15 @@ require_once 'data_load.php';
 function draw_plot_bar()
 {
 // new Graph\Graph with a drop shadow
-    $__width = 400;
+    $__width = 600;
     $__height = 300;
     $graph = new Graph\Graph($__width, $__height, 'auto');
     $graph->SetShadow();
-    $graph->title->Set("5 volt bars");
+    $graph->title->Set("Employees");
     $graph->title->SetFont(FF_FONT1, FS_BOLD);
 
 
-    $labels_and_values = get_labels_and_values('get_vout_type_count');
+    $labels_and_values = get_labels_and_values('get_employees_count');
     $labels = $labels_and_values["labels"];
     $values = $labels_and_values["values"];
 

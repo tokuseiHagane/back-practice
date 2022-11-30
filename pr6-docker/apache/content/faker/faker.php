@@ -1,24 +1,28 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once 'IoTDataInstance.php';
+require_once 'ShiftDataInstance.php';
 
 function generate_data()
 {
     $data = array();
 
+    $somearr = array();
+    $somearr = array("Yoga","Fullbody","Swimm","Pilates");
+
+
     $faker = Faker\Factory::create();
     $faker->addProvider(new Faker\Provider\Base($faker));
     $faker->addProvider(new Faker\Provider\DateTime($faker));
     for ($i = 0; $i < 50; $i++) {
-        $data_row = new IoTDataInstance(
-            $faker->randomFloat(1, 23, 24),
-            $faker->randomFloat(1, 4.8, 5),
-            $faker->randomFloat(1, 20, 20.6),
-            $faker->numberBetween(745, 766),
-            $faker->numberBetween(200, 780),
-            $faker->numberBetween(100, 1000),
-            date_timestamp_get($faker->dateTimeBetween('-1 days'))
+        $starttime = date_timestamp_get($faker->dateTimeInInterval('-50 days', '+ 10 days'));
+        $endtime = $starttime + 28800;
+        $data_row = new ShiftDataInstance(
+            $faker->numberBetween(1, 30),
+            $faker->numberBetween(0, 60),
+            $somearr[$faker->numberBetween(0, 3)],
+            $starttime,
+            $endtime
         );
         $data[] = $data_row;
     }

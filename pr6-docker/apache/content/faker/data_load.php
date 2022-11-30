@@ -6,30 +6,30 @@ function get_raw_data(): array {
     return json_decode($input);
 }
 
-function get_temp_count($data): array
+function get_services_count($data): array
 {
-    $temp_count = array();
+    $services_count = array();
     foreach ($data as $row) {
-        $temperature = number_format($row->temperature, 1, '.', '');
-        if (!isset($temp_count[$temperature])) {
-            $temp_count[$temperature] = 0;
+        $services = $row->services;
+        if (!isset($services_count[$services])) {
+            $services_count[$services] = 0;
         }
-        $temp_count[$temperature] += 1;
+        $services_count[$services] += 1;
     }
-    return $temp_count;
+    return $services_count;
 }
 
-function get_vout_type_count($data): array
+function get_employees_count($data): array
 {
-    $vout_type_count = array();
+    $employees_count = array();
     foreach ($data as $row) {
-        $vout = $row->vout;
-        if(!isset($vout_type_count[$vout])) {
-            $vout_type_count[$vout] = 0;
+        $employeeCount = $row->employeeCount;
+        if(!isset($employees_count[$employeeCount])) {
+            $employees_count[$employeeCount] = 0;
         }
-        $vout_type_count[$vout] += 1;
+        $employees_count[$employeeCount] += 1;
     }
-    return $vout_type_count;
+    return $employees_count;
 }
 
 function get_month_count($data): array
@@ -45,20 +45,20 @@ function get_month_count($data): array
     return $count;
 }
 
-function get_day_blood_tuple(): array {
+function get_daily_attendance(): array {
     $data = get_raw_data();
-    $humidity_array = array();
-    $time_array = array();
-    $time = array_column($data, 'time');
+    $clients_array = array();
+    $daystart_array = array();
+    $daystart = array_column($data, 'daystart');
 
-    array_multisort($time, SORT_ASC, $data);
+    array_multisort($daystart, SORT_ASC, $data);
     foreach ($data as $row) {
-        $humidity_array[] = $row->humidity;
-        $time_array[] = $row->time;
+        $clients_array[] = $row->clientCount;
+        $daystart_array[] = $row->daystart;
     }
     return array(
-        "humidity" => $humidity_array,
-        "time" => $time_array
+        "clientCount" => $clients_array,
+        "daystart" => $daystart_array
     );
 }
 

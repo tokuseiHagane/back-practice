@@ -48,7 +48,7 @@ class Authors
     function update()
     {
         $this->id = htmlspecialchars(strip_tags($this->id));
-        $sql = "SELECT name, description FROM " . $this->table_name . " WHERE id = " . $this->id;
+        $sql = "SELECT name, surName, age FROM " . $this->table_name . " WHERE id = " . $this->id;
         if (empty($this->connect->query($sql)->fetch(PDO::FETCH_ASSOC))) {
             return false;
         }

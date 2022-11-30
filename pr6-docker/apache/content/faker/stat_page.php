@@ -38,26 +38,22 @@ foreach ($images as $image) {
 
 <table class="table">
     <tr>
-        <th>Vin (24v)</th>
-        <th>Vout (5v)</th>
-        <th>Temperature</th>
-        <th>Pressure</th>
-        <th>Humidity</th>
-        <th>Sound Level</th>
-        <th>Time</th>
+        <th>Employees</th>
+        <th>Clients</th>
+        <th>Services</th>
+        <th>Start time</th>
+        <th>End time</th>
     </tr>
     <?php
     $data = get_raw_data();
 
     foreach ($data as $data_row) {
         echo "<tr>";
-        echo "<td>".$data_row->vin."</td>";
-        echo "<td>".$data_row->vout."</td>";
-        echo "<td>".$data_row->temperature."</td>";
-        echo "<td>".$data_row->pressure."</td>";
-        echo "<td>".$data_row->humidity."</td>";
-        echo "<td>".$data_row->soundLevel."</td>";
-        echo "<td>".gmdate("Y-m-d H:i:s", $data_row->time)."</td>";
+        echo "<td>".$data_row->employeeCount."</td>";
+        echo "<td>".$data_row->clientCount."</td>";
+        echo "<td>".$data_row->services."</td>";
+        echo "<td>".gmdate("Y-m-d H:i:s", $data_row->daystart)."</td>";
+        echo "<td>".gmdate("Y-m-d H:i:s", $data_row->dayend)."</td>";
         echo "</tr>";
     }
     ?>
